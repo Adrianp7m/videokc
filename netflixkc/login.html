@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Videokc</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Fugaz+One&display=swap' rel='stylesheet'>
+    <link rel='stylesheet' type='text/css' href='/css/fontawesome/css/all.css'>
+    <link rel="icon" href='/assets/img/favicon.ico' type="image/x-icon">
+    <!-- Styles -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/reset.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/form.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/cards.css'>   
+    <link rel='stylesheet' type='text/css' media='screen' href='css/button.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/navbar.css'>
+</head>
+<body class='login-wrapper background-gradient'>
+    <!-- Header with logo -->
+    <header class='header-login'>
+        <a href='/index.html'><img class='logo' src='/images/logov.png' alt=''></a>
+    </header>
+    
+    <main class='login'>
+        <div class='login-title'>
+            <h1 class='title'>Iniciar sesión</h1>
+        </div>
+        <aside class='login-info'>
+            <div class='features'>
+                <h3 class='sub-title'>VideoKc videos en Streaming</h3>
+                <ul class='features-list'>
+                    <li class='features-tick'>
+                        <p>30 dias gratis</p>
+                        <span>Después sólo 5.90€/mes.</span>
+                    </li>
+                    <li class='features-tick'><p>Sin compromiso: Pruebalo gratis</p></li>
+                    <li class='features-tick'><p>Calidad HD</p></li>
+                </ul>
+            </div>
+        </aside>
+        <form action='/' method='POST' class='login-form'>
+            <div class="form-group">
+                <label for='mail' class='label label--light'>Correo electrónico</label>
+                <input type='email' name='mail' required placeholder=' ' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$' class='input input--xl'>
+                <label for='mail' class='label label--help'>Email incorrecto. Revise el formato (xxx@yyy.zzz)</label>
+            </div>
+            <div class="form-group">
+                <label for='password' class='label label--light'>Contraseña</label>
+                <input type='password' name='password' required placeholder=' ' class='input input--xl'>
+            </div>
+            <div class="form-group my-2">
+                <input type='checkbox' name='recordar' id='recordar' class='form-checkbox'>
+                <label for='recordar' class='label label--lg'>Recordar</label>
+            </div>
+            <div class="form-group text-center">
+                <input type='submit' value='Iniciar sesión' class='btn btn-main btn--xl btn--fill my-2'>
+                <a class='link' href='/'>OLVIDÉ MI CONTRASEÑA</a>
+            </div>
+        </form>
+        <div class='login-create'>
+            <h3 class='sub-title'>¿No tienes una cuenta?</h3>
+            <button class='btn btn-outline btn--xl mt-2'>Crea tu cuenta</button>
+        </div>
+    </main>   
+    <!-- Footer -->
+    <footer>
+        <div class='footer-content'>
+            <p>Sigueme en github<a class='link' href=''> Adrian Perez</a></p>
+           
+        </div>
+        <div class='social'>
+                
+            <a class='social-icon' href="">
+                <i class="fab fa-github social-icon--github"></i>
+            </a>
+            <a class='social-icon' href="">
+                <i class="fab fa-twitter social-icon--twitter"></i>
+            </a>
+            <a class='social-icon' href="">
+                <i class="fab fa-instagram social-icon--instagram"></i>
+            </a>
+            <a class='social-icon' href="https://www.linkedin.com/in/adrián-pérez-martinez-peña-71574398">
+                <i class="fab fa-linkedin social-icon--linkedin"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

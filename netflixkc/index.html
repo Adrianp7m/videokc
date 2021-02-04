@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>VideoKc</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Fugaz+One&display=swap' rel='stylesheet'>
+    <link rel='icon' href='/images/favorito.ico' type='images/favorito'>
+    <!-- Styles -->
+    <link href='/css/fontawesome/css/all.css' rel='stylesheet' media='all'>
+    <link href='/css/reset.css' rel='stylesheet' media='all'>
+    <link href='/css/styles.css' rel='stylesheet' media='all'>
+    <link href='/css/form.css' rel='stylesheet' media='all'>
+    <link href='/css/cards.css' rel='stylesheet' media='all'>   
+    <link href='/css/button.css' rel='stylesheet' media='all'>
+    <link href='/css/navbar.css' rel='stylesheet' media='all'>
+    <link href='/css/hero.css' rel='stylesheet' media='all'>
+</head>
+<body>
+
+    <!-- Header with navbar -->
+    <header>
+        <nav class='navbar'>
+            <div class='container'>
+                <label for='toggler' class='navbar-toggler'></label>
+                <input type='checkbox' id='toggler' role='button'>  
+                <a class='navbar-brand navbar-brand--small mr-1' href='/'><img src='/images/logov.png' alt='Logo'></a>              
+                <ul class='navbar-list navbar-list--main'>
+                    <li class='navbar-item navbar-brand'><a href='/'><img src='/images/logov.png' alt='Logo'></a></li>
+                    <li class='navbar-item navbar-item--active'><a href='/'>Inicio</a></li>
+                    <li class='navbar-item'><a href='/'>Peliculas</a></li>
+                    <li class='navbar-item'><a href='/'>Series</a></li>
+                    <li class='navbar-item'><a href='/'>Novedades</a></li>
+                    <li class='navbar-item'><a href='/'>Favoritos</a></li>
+                    <li class='navbar-item'>
+                        <form action="/" method="GET">
+                            <button class='btn'action="submit"><i class='fas fa-search btn--white'></i></button>
+                            <input type='text' placeholder='Que Quieres ver...'>
+                        </form>
+                    </li>
+                </ul>
+                <div id ='account' class='account'>
+                    <img  src='/images/favorito.ico' alt='account'>
+                    <i class='fas fa-caret-down'></i>
+                    <div class='account-options'>
+                        <ul class='account-list'>
+                            <li class='navbar-item'>
+                                <span>Cambiar de perfil</span>
+                            </li>
+                            <li class='navbar-item'>
+                                <img src='/images/hip.ico' alt='account'>
+                                <a href='/login.html'>Adrian</a>
+                            </li>
+                            <li class='navbar-item'>
+                                <img src='/images/cat.ico' alt='account'>
+                                <a href='/login.html'>Isabel</a>
+                            </li>
+                            <li class='separator'></li>
+                            <li class='navbar-item bold'><a href='/login.html'>Cuenta</a></li>
+                            <li class='navbar-item bold'><a href='/login.html'>Centro de ayuda</a></li>
+                            <li class='navbar-item bold'><a href='/login.html'>Cerrar sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    
+    <aside class='hero'>
+        <video id="trailer" autoplay muted id='trailer'>
+            <source src='/video/riverdale.mp4' type='video/mp4'>
+            Your browser does not support the video tag
+        </video>
+        <div class='hero-content'>
+            <div class='container'>
+                <h1 class='sub-title text-white'>Novedades para ti...</h1>
+                <h2 class='title text-white'>Nueva Serie <span class='text-muted'>(nueva temporada)</span></h2>
+                <div class='hero-buttons mt-3'>
+                    <a href='/detail.html' class='btn btn-trailer btn--lg'><i class='fas fa-play mr-1'></i>Reproducir</a>
+                    <a href='/detail.html' class='btn btn-trailer btn--lg'><i class='fas fa-plus mr-1'></i>Añadir a mi lista</a>
+                    <a href='/detail.html' class='btn btn-trailer btn--lg'><i class='fas fa-list mr-1'></i>Más infomación</a>
+                </div>
+            </div>
+            <span class='agerating'>16 +</span>
+        </div>
+    </aside>
+
+    <!-- Main panel with lists -->
+    <main class='container main-wrapper'>
+        <section id='mylist' class='row movies mt-3'>
+            <h2 class='movies-title'>Seguir viendo</h2>
+            <div class='movies-list'>
+                <article class='card'>
+                    <figure>
+                        <img src='/images/Lacomunidaddelanillo.jpg' alt=''>
+                        <figcaption class='card-content'>
+                            <h3>El Señor de los Anillos</h3>
+                            <div class='card-tags'>
+                                <span class='card-alert'>Estreno!</span>
+                                <span class='card-age d-hidden'></span>
+                            </div>
+                            <progress class='card-progress' value='40' max='100'></progress>
+                        </figcaption>
+                    </figure>
+                    <div class='card-back'>
+                        <h3>Comienza el viaje de Frodo</h3>
+                        <div class='rating'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star-half-alt'></i>
+                        </div>
+                        <p><span>Año</span>: 2001</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class='buttons'>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></a>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></a>
+                        </div>
+                    </div>
+                </article>
+                <article class='card'>
+                    <figure>
+                        <img src='/images/Gladiator.jpg' alt=''>
+                        <figcaption class='card-content'>
+                            <h3>Gladiator</h3>
+                            <div class='card-tags'>
+                                <span class='card-alert d-hidden'></span>
+                                <span class='card-age'>+18</span>
+                            </div>
+                            <progress class='card-progress' value='64' max='100'></progress>
+                        </figcaption>
+                    </figure>
+                    <div class='card-back'>
+                        <h3>le quitaron a su familia...</h3>
+                        <div class='rating'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='far fa-star'></i>
+                            <i class='far fa-star'></i>
+                        </div>   
+                        <p><span>Año</span>: 2000</p>
+                        <p><span>Calificación:</span> +18</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class='buttons'>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></a>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></a>
+                        </div>
+                    </div>
+                </article>
+                <article class='card'>
+                    <figure>
+                        <img src='/images/joker.jpg' alt=''>
+                        <figcaption class='card-content'>
+                            <h3>Joker</h3>
+                            <div class='card-tags'>
+                                <span class='card-alert d-hidden'></span>
+                                <span class='card-age d-hidden'></span>
+                            </div>
+                            <progress class='card-progress' value='95' max='100'></progress>
+                        </figcaption>
+                    </figure>
+                    <div class='card-back'>
+                        <h3>Descubre los inicios del Joker</h3>
+                        <div class='rating'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star-half-alt'></i>
+                            <i class='far fa-star'></i>
+                        </div>   
+                        <p><span>Año</span>: 2019</p>
+                        <p><span>Calificación:</span> +18</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class='buttons'>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></a>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></a>
+                        </div>
+                    </div>
+                </article>
+                <article class='card'>
+                    <figure>
+                        <img src='/images/lobezno.jpg' alt=''>
+                        <figcaption class='card-content'>
+                            <h3>lobezno</h3>
+                            <div class='card-tags'>
+                                <span class='card-alert'>Nueva</span>
+                                <span class='card-age'>+16</span>
+                            </div>
+                            <progress class='card-progress' value='12' max='100'></progress>
+                        </figcaption>
+                    </figure>
+                    <div class='card-back'>
+                        <h3>lobezno....</h3>
+                        <div class='rating'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star-half-alt'></i>
+                            <i class='far fa-star'></i>
+                        </div>      
+                        <p><span>Año</span>: 2017</p>
+                        <p><span>Calificación:</span> +16</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class='buttons'>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></a>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></a>
+                        </div>
+                    </div>
+                </article>    
+                <article class='card'>
+                    <figure>
+                        <img src='/images/matrix.png' alt=''>
+                        <figcaption class='card-content'>
+                            <h3>Matrix</h3>
+                            <div class='card-tags'>
+                                <span class='card-alert'>Super Exito</span>
+                                <span class='card-age d-hidden'></span>
+                            </div>
+                            <progress class='card-progress' value='63' max='100'></progress>
+                        </figcaption>
+                    </figure>
+                    <div class='card-back'>
+                        <h3>Pastilla roja o azul, tu eliges</h3>
+                        <div class='rating'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star-half-alt'></i>
+                            <i class='far fa-star'></i>
+                        </div>      
+                        <p><span>Año</span>: 2000</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class='buttons'>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></a>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></a>
+                        </div>
+                    </div>
+                </article>    
+                <article class='card'>
+                    <figure>
+                        <img src='/images/star wars.jpg' alt=''>
+                        <figcaption class='card-content'>
+                            <h3>Star wars</h3>
+                            <div class='card-tags'>
+                                <span class='card-alert'></span>
+                                <span class='card-age'>+16</span>
+                            </div>
+                            <progress class='card-progress' value='75' max='100'></progress>
+                        </figcaption>
+                    </figure>
+                    <div class='card-back'>
+                        <h3>Que la fuerza te acompañe</h3>
+                        <div class='rating'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star-half-alt'></i>
+                            <i class='far fa-star'></i>
+                        </div>      
+                        <p><span>Año</span>: 2010</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class='buttons'>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></a>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></a>
+                        </div>
+                    </div>
+                </article>    
+                <article class='card'>
+                    <figure>
+                        <img src='/images/titanic.jpg' alt=''>
+                        <figcaption class='card-content'>
+                            <h3>Titanic</h3>
+                            <div class='card-tags'>
+                                <span class='card-alert'>Super exito</span>
+                                <span class='card-age'>Tp</span>
+                            </div>
+                            <progress class='card-progress' value='52' max='100'></progress>
+                        </figcaption>
+                    </figure>
+                    <div class='card-back'>
+                        <h3>La historia del Titanic</h3>
+                        <div class='rating'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star-half-alt'></i>
+                            <i class='far fa-star'></i>
+                        </div>       
+                        <p><span>Año</span>: 2000</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class='buttons'>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></a>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></a>
+                        </div>
+                    </div>
+                </article>
+                <article class='card'>
+                    <figure>
+                        <img src='/images/venom.jpg' alt=''>
+                        <figcaption class='card-content'>
+                            <h3>venom</h3>
+                            <div class='card-tags'>
+                                <span class='card-alert'>Marvel</span>
+                                <span class='card-age'>+16</span>
+                            </div>
+                            <progress class='card-progress' value='5' max='100'></progress>
+                        </figcaption>
+                    </figure>
+                    <div class='card-back'>
+                        <h3>Venom...</h3>
+                        <div class='rating'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star-half-alt'></i>
+                            <i class='far fa-star'></i>
+                        </div>       
+                        <p><span>Año</span>: 2019</p>
+                        <p><span>Calificación:</span> +18</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class='buttons'>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></a>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section id='originals' class='row movies mt-4'>
+            <h2 class='movies-title'>Originales</h2>
+            <div class='movies-list movies-list--original'>
+                <article class='card-org'>
+                    <figure>
+                        <img src='/images/originals.jpg' alt=''>
+                        <figcaption class='card-content'>
+                            <h3>Originals</h3>
+                            <div class='card-tags'>
+                                <span class='card-alert'>Spin off</span>
+                                <span class='card-age'>+16</span>
+                            </div>
+                            <div class='card-slide'>
+                                <div class='rating'>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star-half-alt'></i>
+                                </div>
+                                <p><span>Año</span>: 2016</p>
+                                <p>Spin off de Cronicas Vampiricas, centrado en la familia Original</p>
+                                <div class='buttons'>
+                                    <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></a>
+                                    <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></a>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class='card-org'>
+                    <figure>
+                        <img src='/images/riverdale.jpg' alt=''>
+                        <figcaption class='card-content'>
+                            <h3>Riverdale</h3>
+                            <div class='card-tags'>
+                                <span class='card-alert'>Nueva Temporada</span>
+                                <span class='card-age'>TP</span>
+                            </div>
+                            <div class='card-slide'>
+                                <div class='rating'>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='far fa-star'></i>
+                                </div>
+                                <p><span>Año</span>: 2019</p>
+                                <p>temporada 5 ya disponible</p>
+                                <div class='buttons'>
+                                    <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></a>
+                                    <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></a>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class='card-org'>
+                    <figure>
+                        <img src='/images/stranger.jpg' alt=''>
+                        <figcaption class='card-content'>
+                            <h3>stranger things</h3>
+                            <div class='card-tags'>
+                                <span class='card-alert'>Mas visto</span>
+                                <span class='card-age'>TP</span>
+                            </div>
+                            <div class='card-slide'>
+                            <div class='rating'>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                            </div>   
+                            <p><span>Año</span>: 2015</p>
+                            <p>Descubre el fenomeno del que todo el mundo habla</p>
+                            </p>
+                            <div class='buttons'>
+                                <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></a>
+                                <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></a>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class='card-org'>
+                    <figure>
+                        <img src='/images/Juego de tronos.jpg' alt=''>
+                        <figcaption class='card-content'>
+                            <h3>Game Of Trones</h3>
+                            <div class='card-tags'>
+                                <span class='card-alert d-hidden'>Estreno!</span>
+                                <span class='card-age'>TP</span>
+                            </div>
+                            <div class='card-slide'>
+                                <div class='rating'>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star-half-alt'></i>
+                                    <i class='far fa-star'></i>
+                                    <i class='far fa-star'></i>
+                                </div>   
+                                <p><span>Año</span>: 2019</p>
+                                <p>
+                                    lucha por un trono,dragones,batallas, conspiraciones... que mas se puede pedir 
+                                </p>
+                                <div class='buttons'>
+                                    <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></a>
+                                    <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></a>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </article>
+            </div>
+        </section>
+        <section id='Recomendaciones' class='row movies mt-4'>
+            <h2 class='movies-title'>Recomendaciones</h2>
+            <div class='movies-list'>
+                <article class='card'>
+                    <figure>
+                        <img src='/images/aladin.jpg' alt=''>
+                        <figcaption class='card-content'>
+                            <h3>Aladin</h3>
+                            <div class='card-tags'>
+                                <span class='card-alert'></span>
+                                <span class='card-age'></span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <div class='card-back'>
+                        <h3>Remake aladin</h3>
+                        <div class='rating'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star-half-alt'></i>
+                            <i class='far fa-star'></i>
+                        </div>      
+                        <p><span>Año</span>: 2020</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class='buttons'>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></a>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></a>
+                        </div>
+                    </div>
+                   
+                </article>
+                <article class='card'>
+                    <figure>
+                        <img src='/images/dark phoenix.jpg' alt=''>
+                        <figcaption class='card-content'>
+                            <h3>Dark Fenix</h3>
+                            <div class='card-tags'>
+                                <span class='card-alert'>Estreno</span>
+                                <span class='card-age'>'</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <div class='card-back'>
+                        <h3>dark fenix , mas oscura</h3>
+                        <div class='rating'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star-half-alt'></i>
+                            <i class='far fa-star'></i>
+                        </div>      
+                        <p><span>Año</span>: 2010</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class='buttons'>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></a>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></a>
+                        </div>
+                    </div>
+                </article>
+                <article class='card'>
+                    <figure>
+                        <img src='/images/avengers.jpg' alt=''>
+                        <figcaption class='card-content'>
+                            <h3>Los Vengadores</h3>
+                            <div class='card-tags'>
+                                <span class='card-alert'>Marvel</span>
+                                <span class='card-age'></span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <div class='card-back'>
+                        <h3>Solo ellos pueden salvar el mundo</h3>
+                        <div class='rating'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star-half-alt'></i>
+                            <i class='far fa-star'></i>
+                        </div>      
+                        <p><span>Año</span>: 2009</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class='buttons'>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></a>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></a>
+                        </div>
+                    </div>
+                </article>
+                <article class='card'>
+                    <figure>
+                        <img src='/images/2012.jpg' alt=''>
+                        <figcaption class='card-content'>
+                            <h3>2012</h3>
+                            <div class='card-tags'>
+                                <span class='card-alert'></span>
+                                <span class='card-age'></span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <div class='card-back'>
+                        <h3>Es el fin del mundo</h3>
+                        <div class='rating'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star-half-alt'></i>
+                            <i class='far fa-star'></i>
+                        </div>      
+                        <p><span>Año</span>: 2012</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class='buttons'>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></a>
+                            <a href='/detail.html' class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></a>
+                        </div>
+                    </div>
+                </article>            
+            </div>
+        </section>
+    </main>
+
+    
+    <footer>
+        <div class='footer-content'>
+            <p> Sigueme en github <a class='link' href='https://github.com/Adrianp7m'> Adrian Perez</a></p>
+        
+        </div>
+        <div class='social'>
+               
+            <a class='social-icon' href='https://github.com/Adrianp7m'>
+                <i class='fab fa-github social-icon--github'></i>
+           
+            </a>
+            <a class='social-icon' href=''>
+                <i class='fab fa-instagram social-icon--instagram'></i>
+            </a>
+            <a class='social-icon' href='https://www.linkedin.com/in/adrián-pérez-martinez-peña-71574398'>
+                <i class='fab fa-linkedin social-icon--linkedin'></i>
+            </a>
+        </div>
+    </footer>
+    
+</body>
+</html>

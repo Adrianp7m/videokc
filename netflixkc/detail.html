@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Videokc - Detail</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Fugaz+One&display=swap' rel='stylesheet'>
+    <link rel='stylesheet' type='text/css' href='/css/fontawesome/css/all.css'>
+    <link rel="icon" href='/images/favorito.ico' type="images/favorito">
+    <!-- Styles -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/reset.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/form.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/cards.css'>   
+    <link rel='stylesheet' type='text/css' media='screen' href='css/button.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/navbar.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/hero.css'>
+</head>
+<body>
+
+    <!-- Header with navbar -->
+    <header>
+        <nav class='navbar'>
+            <div class='container'>
+                <input type='checkbox' id='toggler' role='button'>  
+                <label for='toggler' class='navbar-toggler'></label>
+                <a class='navbar-brand navbar-brand--small mr-1' href='/'><img src='/images/logov.png' alt='Logo'></a>              
+                <ul class='navbar-list navbar-list--main'>
+                    <li class='navbar-item navbar-brand'><a href='/'><img src='/images/logov.png' alt='Logo'></a></li>
+                    <li class='navbar-item navbar-item--active'><a href='/'>Inicio</a></li>
+                    <li class='navbar-item'><a href='/'>Peliculas</a></li>
+                    <li class='navbar-item'><a href='/'>Series</a></li>
+                    <li class='navbar-item'><a href='/'>Novedades</a></li>
+                    <li class='navbar-item'><a href='/'>Favoritos</a></li>
+                    <li class='navbar-item'>
+                        <form action="/" method="GET">
+                            <button class='btn'action="submit"><i class='fas fa-search btn--white'></i></button>
+                            <input type='text' placeholder='Que te apetece ver...'>
+                        </form>
+                    </li>
+                </ul>
+                <div id ='account' class='account'>
+                    <img  src='/images/favorito.ico' alt='account'>
+                    <i class='fas fa-caret-down'></i>
+                    <div class='account-options'>
+                        <ul class='account-list'>
+                            <li class='navbar-item'>
+                                <span>Cambiar de perfil</span>
+                            </li>
+                            <li class='navbar-item'>
+                                <img src='/images/hip.ico' alt='account'>
+                                <a href='/login.html'>Adrian</a>
+                            </li>
+                            <li class='navbar-item'>
+                                <img src='/images/cat.ico' alt='account'>
+                                <a href='/login.html'>Isabel</a>
+                            </li>
+                            <li class='separator'></li>
+                            <li class='navbar-item bold'><a href='/login.html'>Cuenta</a></li>
+                            <li class='navbar-item bold'><a href='/login.html'>Centro de ayuda</a></li>
+                            <li class='navbar-item bold'><a href='/login.html'>Cerrar sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>        
+    </header>
+
+    <!-- Hero panel with image -->
+    <section class='hero'>
+        <div class='hero-wrapper hero-wrapper--blur'>
+           <img src="/images/Anillos.jpeg" alt=""
+        </div>  
+    
+        <div class='hero-content'>
+            <div class='container'>
+                <h1 class="title text-white">El señor de los Anillos</h1>
+                <div class='hero-buttons mt-3'>
+                    <a href='/detail.html' class='btn btn-trailer btn--lg mr-1'><i class='fas fa-play mr-1'></i>Reproducir</a>
+                    <a href='/detail.html' class='btn btn-trailer btn--lg mr-1'><i class='fas fa-plus mr-1'></i>Añadir a mi lista</a>
+                    <a href='/detail.html' class='btn btn-trailer btn--lg'><i class='fas fa-list mr-1'></i>Más infomación</a>
+                </div>
+            </div>
+            <span class='agerating'>16 +</span>
+        </div>
+    </section>
+
+<!-- Main panel with lists -->
+    <main class='container main-wrapper main-wrapper--center'>
+        <div class="tab">
+            <input class='tab-input' checked="checked" id='tab-1' type="radio" name="pct" />
+            <input class='tab-input' id='tab-2' type="radio" name="pct" />
+            <input class='tab-input' id='tab-3' type="radio" name="pct" />
+            <nav class='tab-nav'>
+                <ul>
+                    <li class="tab-1">
+                        <label class='tab-label tab-label--1' for="tab-1">Sinopsis</label>
+                    </li>
+             <!--  <li class="tab-2">
+                        <label class='tab-label tab-label--2' for="tab-2">Trailer</label>
+                    </li> -->
+                   
+                </ul>
+            </nav>
+            <section class='tab-sections'>
+                <div class="tab-section tab-section--1">
+                    <div class='details'>
+                        <img class='section-mini' src="/images/favorito.ico" alt="">
+                        <div class='rating'>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p><span>Años:</span> 2015, 2016, 2017</p>
+                        <p><span>Episodios:</span> 2 Episodios</p>     
+                        <p><span>Actores:</span>
+                            <ul class='details-actors'>
+                                <li>Elijah Wood</li>
+                                <li>Orlando Bloom</li>
+                                <li>Sean Astin</li>                                
+                            </ul>
+                        </p>                   
+                        <div class="buttons my-1">
+                            <button class='btn btn-trailer btn--sm mr-2'><i class='fas fa-play mr-1'></i>Play</button>
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus mr-1'></i>Add to List</button>
+                        </div>
+                    </div>
+                    <div class='sinopsis'>
+                        <div class='sinopsis-text'>
+                            <p>
+                                La novela narra el viaje del protagonista principal, Frodo Bolsón, hobbit de la Comarca, para destruir el Anillo Único y la consiguiente guerra que provocará el enemigo para recuperarlo
+                           </p>
+                            <p class="mt-2">
+                                ya que es la principal fuente de poder de su creador, el Señor oscuro, Sauron. «Tres Anillos para los Reyes Elfos bajo el cielo.
+                            </p>    
+                        </div>
+                        <section id="comments" class="comments">
+                            <span><i class="fa fa-comments mr-1"></i> comentarios</span>
+                            <div class="comment">
+                                <img src='/images/hip.ico' alt='Adrian'>
+                                <div class="comment-body">
+                                    <p class="comment-name">
+                                        <a href="/"> Adrian </a>
+                                        <span><small>hace 2 dias </span></small>
+                                        <i class='fa fa-thumbs-up'></i><span><small>12</span></small>
+                                    </p>
+                                    <p class="comment-text">
+                                        Pelicula imprescincible, engancha de principio a fin
+                                    </p>
+                                </div>
+
+                            </div>
+                      
+                            </div>
+                        </section>
+                    </div>
+               </div>
+               <video src="/video/señor.mp4" poster="images/imagense.jpg" controls></video>
+               
+                </div>
+
+            
+                
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class='footer-content'>
+            <p>Sigueme en github <a class='link' href=''> Adrian Perez</a></p>
+           
+        </div>
+        <div class='social'>
+                
+            <a class='social-icon' href="">
+                <i class="fab fa-github social-icon--github"></i>
+            </a>
+            <a class='social-icon' href="">
+                <i class="fab fa-twitter social-icon--twitter"></i>
+            </a>
+            <a class='social-icon' href="">
+                <i class="fab fa-instagram social-icon--instagram"></i>
+            </a>
+            <a class='social-icon' href="https://www.linkedin.com/in/adrián-pérez-martinez-peña-71574398">
+                <i class="fab fa-linkedin social-icon--linkedin"></i>
+            </a>
+        </div>
+    </footer>
+</body>

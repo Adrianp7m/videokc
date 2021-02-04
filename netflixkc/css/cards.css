@@ -1,0 +1,294 @@
+/********************************************
+ * CARD COMPONENT - used to display         * 
+ * media content. There are three types     *
+ *  - card (standard size rotable card)     *
+ *  - card-org (big size slide up card)     *
+ *  - card-epi (episode card)               *
+  *******************************************/
+.card {
+    position: relative;
+    width: 100%;
+    height: 225px;
+    font-size: .9rem;
+}
+
+.card figure, 
+.card-org figure,
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all .8s ease;
+    transition: all .8s ease;
+    border-radius: 10px;
+}
+
+.card figcaption,
+.card-org figcaption {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.card figure:first-child { position: relative; }
+
+.card h3, 
+.card-org h3 {
+    text-transform: uppercase;
+    letter-spacing: .1px;
+    font-family: 'Fugaz One', cursive;
+    font-size: 1.25rem;
+}
+
+.card figcaption h3, 
+.card-org figcaption h3 {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 4px;
+    margin: 10px;
+    padding: 3px 10px;
+}
+
+.card-back {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+    background-color: rgba(255, 255, 255, .25);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: 15px;
+    height: 100%;
+}
+
+.card-back span { font-weight: bold; }
+.card-back .buttons { 
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+.card-back iframe {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.card .rating, 
+.card-org .rating {
+    color:  gold; 
+}
+
+.card figure img,
+.card-org figure img {
+    width: 100%;
+    height: 100%;
+    -o-object-position: center;
+    object-position: center;
+    -o-object-fit: cover;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.card-tags {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card-alert {
+    padding: 4px 10px;
+    background-color: red;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.card-age {
+    padding: 4px 10px;
+    background-color: rgba(0, 0, 0, .5);
+    color: var(--main-white);
+    border-left: solid 3px var(--main-white);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.card-progress {
+    position: absolute;
+    bottom: -12px;
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border: none;
+    background-color: red;
+    height: 3px;
+}
+
+.card progress::-webkit-progress-value {
+    background-color: red;
+}  
+
+.card-org {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.card-org .card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.card-slide {
+    height: 50%;
+    width: 100%;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, .6);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    z-index: 1;
+}
+
+.card-org:hover .card-slide { 
+    -webkit-transform: translateY(0%); 
+    transform: translateY(0%); 
+}
+.card:hover figure { 
+    -webkit-transform: rotateY(180deg); 
+    transform: rotateY(180deg); 
+}
+.card:hover .card-back { 
+    -webkit-transform: rotateY(0); 
+    transform: rotateY(0); 
+}
+.card:hover .card-back iframe { opacity: 1; }
+
+/* List de minis de películas */
+.movies {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.movies-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.movies-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-flow: row;
+    grid-gap: 30px;
+}
+
+/* Episode card */
+.episode {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.episode img {
+    width: 150px;
+    max-width: 150px;
+    margin-right: 20px;
+}
+
+.episode .buttons { margin-top: 10px; }
+.episode-summary { font-size: .95rem; }
+ 
+@media (max-width: 500px) {
+    .episode { 
+        -webkit-box-orient: vertical; 
+        -webkit-box-direction: normal; 
+        -ms-flex-direction: column; 
+        flex-direction: column; 
+    }
+    .episode img { margin-bottom: 15px; }
+    .episode .buttons { margin-top: 5px; }  
+}
