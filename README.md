@@ -6,7 +6,7 @@ La practica consiste en hacer una pagina tipo -netflix  , usando solo html y css
 
 son 3 pantallas 
 
-login
-pagina principal
+login, 
+pagina principal, 
 pagina con trailer y detalles
 
